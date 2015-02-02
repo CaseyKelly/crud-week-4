@@ -2,6 +2,10 @@
   <thead>
     <tr>
       <th>Events</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Capacity</th>
+      <th>Requires ID?</th>
     </tr>
   </thead>
 
@@ -11,6 +15,10 @@
     <% @events.each do |event| %>
           <tr>
             <td><%= link_to event.description, event %></td>
+            <td><%= event.date %></td>
+            <td><%= event.location %></td>
+            <td><%= event.capacity %></td>
+            <td><%= event.requires_id %></td>
             <td><%= link_to 'Edit', edit_event_path(event) %>
             <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <td>
