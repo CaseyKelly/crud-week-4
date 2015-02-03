@@ -14,9 +14,11 @@
 <p><%= f.label :capacity %>
 <%= f.number_field :capacity %></p>
 
-<p><%= f.label "Requires ID?" %>
+<p><%= f.label :requires_id, "Requires ID?" %>
 <%= f.check_box :requires_id %></p>
 
 <%= f.submit 'Submit' %>
 
 <% end %>
+
+<p><%= link_to 'Back', events_path %></p>
